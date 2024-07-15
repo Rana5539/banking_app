@@ -49,11 +49,11 @@ const AuthForm = ({type}: {type: string}) => {
         setUser(newUser);
       }
     if(type === 'sign-in'){
-const response = await signIn ({
-  email:data.email,
-  password: data.password,
-})
-if(response) router.push('/')
+// const response = await signIn ({
+//   email:data.email,
+//   password: data.password,
+// })
+// if(response) router.push('/')
     }
     
     } catch (error) {
@@ -76,7 +76,7 @@ if(response) router.push('/')
         </Link>
         <div className='flex flex-col gap-1 md:gap-3'>
 <h1 className='text-24 lg:text-36 font-semibold  text-gray-900'>
-   {user? 'Link Account': type==='sign-in'? 'Sign-in': 'Sign-up'} 
+   {user? 'Link Account': type==='sign-in'? 'Sign In': 'Sign Up'} 
 
 </h1>
 <p className='text-16 font-normal text-gray-600 '>
@@ -109,7 +109,7 @@ if(response) router.push('/')
         <div className='flex gap-4'>
         <Custominput control={form.control} name='dateOfBirth' label='Date of Birth' placeholder={'Example: YYYY-MM-DD'}/>
 
-        <Custominput control={form.control} name='IdCard' label='Last 4 Digits of CNIC' placeholder={'Example: 2354'}/>
+        <Custominput control={form.control} name='idCard' label='Last 4 Digits of CNIC' placeholder={'Example: 2354'}/>
         </div>
           </>
           
@@ -140,6 +140,7 @@ if(response) router.push('/')
         </>
         }
         </section>
+        
   )
 }
 
